@@ -58,7 +58,7 @@ void removeElementsInVector(vector<MyNumber *> &input, bool useMax) {
         int *counter = getCts(input, idx);
         max = counter[0] >counter[1] ? 0 : 1; 
         input.erase(std::remove_if( input.begin(), input.end(), [idx, max, useMax](MyNumber *num ) {
-            return useMax ? num->getIntAt(idx) == max : num->getIntAt(idx) != max;;
+            return useMax ? num->getIntAt(idx) == max : num->getIntAt(idx) != max;
         }), input.end());
         idx++;
     }
